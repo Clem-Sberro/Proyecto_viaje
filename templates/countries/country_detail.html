@@ -1,6 +1,6 @@
 {% extends "index.html" %}
 
-{% block title %}{{country}}{% endblock %}
+{% block title %}{{object.country_name}}{% endblock %}
 
 {% block content %}
 
@@ -17,8 +17,9 @@ style="
 <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
   <div class="d-flex justify-content-center align-items-center h-100">
     <div class="text-white">
-      <h1 class="mb-3">{{country}}</h1>
-      <h4 class="mb-3">{{greeting}}</h4>
+      <h1 class="mb-3">{{object.country_name}}</h1>
+      <h4 class="mb-3">{{object.capital}}</h4>
+      <p>{{object.short_description}}</p>
       <a class="btn btn-outline-light btn-lg" href="#!" role="button"
         >Call to action</a
       >
