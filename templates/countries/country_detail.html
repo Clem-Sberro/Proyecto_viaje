@@ -1,16 +1,15 @@
 {% extends "index.html" %}
 
 {% block title %}{{object.country_name}}{% endblock %}
-
+{% load static %}
 {% block content %}
-
 
 
 <!-- Background image -->
 <div
 class="p-5 text-center bg-image"
 style="
-  background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.jpg');
+  background-image: url('{{object.main_picture}}');
   height: 400px;
 "
 >
@@ -27,6 +26,11 @@ style="
   </div>
 </div>
 </div>
+
 <!-- Background image -->
+
+<section>
+   {{object.content|safe}} 
+</section>
 
 {% endblock %}    
